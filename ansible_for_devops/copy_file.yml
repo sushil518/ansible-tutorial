@@ -1,0 +1,11 @@
+---
+- name: ansible playbook to copy a file
+  hosts: all
+  become: true
+  tasks:
+  - name: copy a file
+    copy:
+      src: ./index.html
+      dest: /tmp
+      mode: 0600
+      owner: osboxes

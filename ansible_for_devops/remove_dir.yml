@@ -1,0 +1,9 @@
+---
+- name: This playbook creates a file or dir
+  hosts: all
+# become: true
+  tasks:
+  - name: creating a file
+    file:
+      path: /tmp/dir1
+      state: absent
