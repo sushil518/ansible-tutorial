@@ -1,0 +1,16 @@
+---
+ - hosts: localhost
+   vars:
+    x: 45
+    my_name: "Sushilkumar"
+   vars_prompt:
+    name: y
+    prompt: Enter the value for y
+    private: false              # This will show value while typing on the terminal 
+   gather_facts: false
+   tasks:
+   - debug:
+      msg:
+       - "The x value is: {{x}}"
+       - "The my_name value is: {{my_name}}"
+       - "The y value is: {{y}}"

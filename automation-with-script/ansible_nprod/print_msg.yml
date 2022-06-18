@@ -1,0 +1,11 @@
+---
+  - name: This is a simple play to understand debug module 
+    hosts: localhost
+    tasks:
+    - name: Printing a message with msg parameter of debug module
+      debug: 
+        msg: 
+        -  "Welcome to Ansible Playbooks"
+        -  "These are the basic concepts"
+        -  "We will discuss advanced concept later"
+   
