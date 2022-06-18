@@ -1,0 +1,22 @@
+target1 ansible_host=192.168.30.5 ansible_ssh_user=osboxes
+target2 ansible_host=192.168.30.6 ansible_ssh_user=osboxes
+target3 ansible_host=192.168.56.108 ansible_user=osboxes
+target4 ansible_host=192.168.56.109 ansible_user=osboxes
+target5 ansible_host=192.168.56.110 ansible_user=osboxes
+target6 ansible_host=192.168.56.111 ansible_user=osboxes
+
+
+[webservers]
+target1
+target3
+target4
+target5
+
+[databaseservers]
+target2
+target6
+
+
+[nfs_database_servers:children]
+webservers
+databaseservers

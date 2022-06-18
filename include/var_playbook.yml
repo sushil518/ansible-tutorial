@@ -1,0 +1,25 @@
+-
+  name: This is our first play
+  hosts: target1
+  vars_files:
+    - variable.yml
+  tasks:
+    -
+      name: "task 1"
+      command: touch /tmp/var/{{ var1 }}.txt
+    -
+      name: "task 2"
+      command: touch /tmp/var/{{ var2 }}.txt
+    -
+      name: "task 3"
+      command: touch /tmp/var/{{ var3 }}.txt
+    -
+      name: "task 4"
+      command: touch /tmp/var/{{ var4 }}.txt
+    -
+      name: "task 5"
+      command: touch /tmp/var/{{ var5 }}.txt
+    -
+      name: "task 6"
+      command: touch /tmp/var/{{ var6 }}.txt
+

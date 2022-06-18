@@ -1,0 +1,8 @@
+-
+  name: Test Connectivity
+  hosts: target1
+  vars:
+    ansible_ssh_pass: "{{ lookup('ini', 'password section=target1 file=credentials.ini') }}"
+  tasks:
+  - name: create a dummy file on target1
+    command: touch /tmp/lookups_ini.txt

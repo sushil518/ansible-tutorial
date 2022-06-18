@@ -1,0 +1,6 @@
+-
+  name: this is our 1st playbook
+  hosts: target1
+  roles:
+    - target1
+    - target2

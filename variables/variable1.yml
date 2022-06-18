@@ -1,0 +1,10 @@
+-
+  name: This is our first play
+  hosts: target1
+  vars:
+    servicename: vsftpd
+  tasks:
+    -
+      name: "crate a dummy file on target1 machine"
+      service: name={{ servicename }} state=started
+

@@ -1,0 +1,7 @@
+-
+  name: this is our first play.
+  hosts: target1
+  tasks:
+    -
+      name: "create a dumy file on target1 machine"
+      command: touch /tmp/ansible_dummy.txt

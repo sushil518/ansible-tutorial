@@ -1,0 +1,20 @@
+-
+  name: this is our first play.
+  hosts: target1
+  tasks:
+    -
+      name: "create a dumy file on target1 machine"
+      command: touch /tmp/file_on_target1
+    -
+      name: "copying hosts files in tmp folder"
+      command: cp /etc/hosts /tmp/myhosts
+-
+  name: this is our second play.
+  hosts: web_database_servers
+  tasks:
+    -
+      name: "createing a directory in tmp directory"
+      command: mkdir /tmp/mysecondPlayDir
+    -
+      name: "create a dumy file in database and webservers machine"
+      command: touch /tmp/mysecondPlayDir/secondPlay.txt

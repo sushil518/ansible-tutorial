@@ -1,0 +1,9 @@
+target1 ansible_host=192.168.30.5 ansible_ssh_pass=master ansible_connection=ssh ansible_port=22 ansible_user=root
+target2 ansible_host=192.168.30.6 ansible_ssh_pass=master ansible_connection=ssh ansible_port=22 ansible_user=root
+
+
+[webservers]
+target1
+
+[databaseservers]
+target2

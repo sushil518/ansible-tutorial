@@ -1,0 +1,10 @@
+-
+  name: this is our first play.
+  hosts: target1
+  tasks:
+    -
+      name: "create a dumy directory on target1 machine"
+      command: mkdir -p /tmp/ansible_dummy_1
+    -
+      name: "create a dumy file in target1 machine"
+      command: touch /tmp/ansible_dummy_1/dummy_file_1.txt

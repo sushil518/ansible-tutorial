@@ -1,0 +1,9 @@
+---
+# tasks file for target1
+-
+  name: 'task 1'
+  command: touch /tmp/target2_play_1_task_.txt
+-
+  name: 'task 2'
+  command: touch /tmp/target2_play_2_task_.txt
+

@@ -1,0 +1,11 @@
+-
+  name: This is our first play
+  hosts: target1
+  tasks:
+    -
+      name: "Installing"
+      yum: name="vsftpd" state=present
+    -
+      name: "Installing"
+      yum: name="tree" state=present
+

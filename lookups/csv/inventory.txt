@@ -1,0 +1,15 @@
+target1 ansible_host=192.168.30.5 
+target2 ansible_host=192.168.30.6
+
+
+[webservers]
+target1
+
+[databaseservers]
+target2
+
+
+[web_database_servers]
+target1
+target2
+

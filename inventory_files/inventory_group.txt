@@ -1,0 +1,16 @@
+target1 ansible_host=192.168.30.5 ansible_ssh_user=osboxes
+target2 ansible_host=192.168.30.6 ansible_ssh_user=osboxes
+target3 ansible_host=192.168.30.7 ansible_ssh_user=osboxes
+target4 ansible_host=192.168.30.8 ansible_ssh_user=osboxes
+target5 ansible_host=192.168.30.9 ansible_ssh_user=osboxes
+
+
+[webservers]
+target1
+target3
+target4
+target5
+
+[databaseservers]
+target2
+target6

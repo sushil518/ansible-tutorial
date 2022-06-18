@@ -1,0 +1,10 @@
+-
+  name: This is our first play
+  hosts: target1
+  tasks:
+    -
+      name: Stop service httpd, if started
+      service: 
+        name: httpd
+        state: stopped
+
