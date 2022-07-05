@@ -1,0 +1,9 @@
+---
+- name: play - target
+  hosts: prod
+  become: yes
+  tasks:
+  - name: nginx is installed
+    package:
+      name: nginx
+      state: present

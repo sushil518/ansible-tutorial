@@ -1,0 +1,14 @@
+---
+- name: play to generate specs report
+  hosts: all
+  tasks:
+  - name: report is generated
+    copy:
+      content: |
+        Distribution: {{ ansible_facts.distribution }}
+        Distribution Release: {{ ansible_facts.distribution_release }}
+        Distribution Version: {{ ansible_facts.distribution_version }}
+        Number of CPU core: {{ ansible_facts.processor_cores }}
+        Total Memory: {{ ansible_facts.memtotal_mb }}
+      dest: /tmp/specs.report
+

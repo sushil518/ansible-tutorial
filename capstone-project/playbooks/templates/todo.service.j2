@@ -1,0 +1,11 @@
+[Unit]
+Description=todo
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5s
+ExecStart=/tmp/todo
+EnvironmentFile=/etc/todo.env
+[Install]
+WantedBy=multi-user.target

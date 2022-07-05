@@ -1,0 +1,13 @@
+---
+- name: play creat users per role
+  hosts: dev, prod
+  become: yes
+  vars_files:
+  - ../vars/users.yml
+  tasks:
+  - name: user exists per its role
+    user: 
+      name: " {{ item.name }}"
+      state: present
+    loop: "{{ assignment_users }}"
+    when: (item.role == 'developer' and 'dev' in group_names) or (item.role == 'ops' and 'prod' in group_names)

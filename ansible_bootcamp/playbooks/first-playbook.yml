@@ -1,0 +1,22 @@
+---
+- name: play for file management
+  hosts: target1
+  tasks:
+    # creat file /tmp/hello.txt' with some content
+
+  - name: hello file is copied
+    copy:
+      content: "Hello There"
+      dest: /tmp/hello.txt
+  - name: hi file is copied
+    copy:
+      content: "Hi here"
+      dest: /tmp/hi.txt
+  - name: files are  archived
+    archive: 
+      path:
+      - /tmp/hello.txt
+      - /tmp/hi.txt
+      dest: /tmp/hh.zip
+      format: zip 
+    

@@ -1,0 +1,6 @@
+---
+- name: play backend group is pinged
+  hosts: prod
+  tasks:
+  - name: task ping runs
+    ping:

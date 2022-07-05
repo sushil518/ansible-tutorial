@@ -1,0 +1,7 @@
+---
+- name: play for discover gather facts tasks
+  hosts: target1
+  tasks:
+  - name: print ansible_facts
+    debug:
+      var: ansible_facts

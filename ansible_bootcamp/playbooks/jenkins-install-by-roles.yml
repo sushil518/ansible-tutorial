@@ -1,0 +1,10 @@
+---
+- hosts: target1
+  become: true
+  vars:
+#    jenkins_hostname: jenkins.example.com
+    java_packages:
+      - java-1.8.0-openjdk
+  roles:
+    - role: geerlingguy.java
+    - role: geerlingguy.jenkins

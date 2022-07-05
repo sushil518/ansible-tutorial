@@ -1,0 +1,8 @@
+---
+- name: play to generate SPEC report
+  hosts: target1
+  tasks:
+  - name: report is generated
+    template:
+      src: ./specs.conf
+      dest: /tmp/specs.conf

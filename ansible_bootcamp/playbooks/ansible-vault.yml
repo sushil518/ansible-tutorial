@@ -1,0 +1,9 @@
+---
+- name: play use encrypted vars
+  hosts: localhost
+  vars_files:
+  - users-vault.yml
+  tasks:
+  - name: encrypted variable is printed
+    debug:
+      var: my_users

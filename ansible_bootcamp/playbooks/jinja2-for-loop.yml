@@ -1,0 +1,23 @@
+---
+- name: play to generate SPECS report
+  hosts: target1
+  vars:
+    app_pages:
+    - home
+    - login
+    - logout
+    app_users:
+    - name: sushil
+      role: developer
+    - name: kumar
+      role: developer
+    - name: John
+      role: ops
+    - name: Doe
+      role: ops
+
+  tasks:
+  - name: report is generated
+    template:
+      src: template-with-loop.conf
+      dest: /tmp/app-report.conf

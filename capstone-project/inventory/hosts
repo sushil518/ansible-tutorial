@@ -1,0 +1,10 @@
+app ansible_host=192.168.30.5
+
+db ansible_host=192.168.30.6
+
+[todo]
+app
+db
+
+[todo:vars]
+ansible_ssh_user=osboxes

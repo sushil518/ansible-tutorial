@@ -1,0 +1,11 @@
+- name: play usage collecions
+  hosts: target1
+  collections:
+  - newswangerd.collection_demo
+  tasks:
+  - name: module usage from collection
+    real_facts:
+      name: Sushilkumar
+  - name: role usage from collection
+    import_role:
+      name: geerlingguy.java

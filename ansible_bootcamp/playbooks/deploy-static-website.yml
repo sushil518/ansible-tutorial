@@ -1,0 +1,17 @@
+---
+- name: Installing Nginx server on target1  
+  hosts: target1
+  become: true
+  tasks:
+  - name: webserver is installed
+    package:
+      name: nginx
+      state: present
+  - name: webserver is up
+    service:
+      name: nginx
+      state: started
+  - name: static website is deployed
+    uri:
+      url: https://raw.githubusercontent.com/abdennour/example-static-website/ansible-course/index.html
+      dest: /usr/share/nginx/html # /var/www/html

@@ -1,0 +1,23 @@
+# first play
+- name: play one
+  hosts: localhost
+  gather_facts: no
+  tags:
+  - play-one
+  tasks:
+  - name: task from first play
+    debug:
+      msg: "I am task from first play"
+
+# second play
+
+- name: play two
+  hosts: localhost
+  gather_facts: no
+  tags:
+  - play-two
+  tasks:
+  - name: task from second play
+    debug:
+      msg: "I am task from second play"
+
